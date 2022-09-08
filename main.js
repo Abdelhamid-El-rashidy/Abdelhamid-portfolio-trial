@@ -102,9 +102,15 @@ ScrollReveal({
 });
 function myFunction(x) {
     if (x.matches) { // If media query matches
+        ScrollReveal().reveal('.navbar', {delay: 150, origin: 'top'});
         ScrollReveal().reveal('.hero-section .hero-content h1', {delay: 200, origin: 'top'});
         ScrollReveal().reveal('.footer-content .down-below', {delay: 100, origin: 'bottom'});
         ScrollReveal().reveal('.footer-content .links, .footer-content .to-top, .footer-content p', {delay: 150, origin: 'bottom'});
+        ScrollReveal().reveal('.projects-container .project-card .project-description', {delay: 100, origin: 'left'});
+        ScrollReveal().reveal('.projects-container .project-card .project-img', {delay: 100, origin: 'right'});
+        ScrollReveal().reveal('.skills__list .skills__item', {delay: 100, origin: 'bottom'});
+        
+        
         
     } else {
         ScrollReveal().reveal('.hero-section .hero-content h1', {delay: 200, origin: 'left'});
@@ -116,6 +122,10 @@ function myFunction(x) {
         // 
         ScrollReveal().reveal('.footer-content .down-below', {delay: 100, origin: 'bottom'});
         ScrollReveal().reveal('.footer-content .links, .footer-content .to-top, .footer-content p', {delay: 150, origin: 'bottom'});
+        // 
+        ScrollReveal().reveal('.projects-container .project-card .project-description', {delay: 100, origin: 'left'});
+        ScrollReveal().reveal('.projects-container .project-card .project-img', {delay: 100, origin: 'right'});
+        ScrollReveal().reveal('.skills__list .skills__item', {delay: 100, origin: 'bottom'});
     }
   }
   
@@ -142,7 +152,10 @@ function myFunction(x) {
 // })
 window.addEventListener('load', () => {
     const preload = document.querySelector('.preload');
+    const navbar = document.querySelector('.nav-bar');
     preload.classList.add('preload-finish');
+    navbar.style.display = 'flex';
+    
     
 });
 
